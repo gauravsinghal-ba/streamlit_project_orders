@@ -13,4 +13,4 @@ order_id,order_date,customer_name,email,city,product,category,quantity,unit_pric
 1012,2025-09-08,Karan Gupta,karan.gupta@example.com,Noida,Backpack,Accessories,1,1499,Net Banking,Processing
 1013,2025-09-09,Priya Iyer,priya.iyer@example.com,Chennai,Smart Watch,Electronics,1,4999,Credit Card,Delivered
 1014,2025-09-10,Aditi Kulkarni,aditi.k@example.com,Nagpur,Tea Kettle,Home,1,1999,UPI,Cancelled
-1015,2025-09-11,Vikram Rao,vikram.rao@example.com,Hyderabad,Protein Bars,Fitness,6,99,COD,Delivered
+1015,2025-09-11,Vikram Rao,vikram.rao@example.com,Hyderabad,Protein Bars,Fitness,6,99,COD,Delivere
