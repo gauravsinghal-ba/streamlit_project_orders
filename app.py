@@ -129,11 +129,16 @@ with c3:
 with c4:
     st.markdown("**Order Value Distribution**")
     if len(filtered) and "order_value" in filtered.columns:
-        # Bucketed histogram-style chart
-        vals = filtered["order_value"].fillna(0)
+        vals = pd.to_numeric(filtered["order_value"], errors="coerce").fillna(0)
+
         bins = pd.cut(vals, bins=10)
         hist = bins.value_counts().sort_index()
-        st.bar_chart(hist)
+
+        hist_df = hist.reset_index()
+        hist_df.columns = ["bucket", "count"]
+        hist_df["bucket"] = hist_df["bucket"].astype(str)  # <-- key fix
+
+        st.bar_chart(hist_df, x="bucket", y="count")
     else:
         st.info("No values to plot.")
 
